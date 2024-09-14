@@ -5,7 +5,14 @@ import nodemailer from "nodemailer";
 
 const port = 6996;
 const app = express();
-app.use(cors({ options: "*" }));
+
+app.use(cors({
+    origin: '*',
+    methods: ['POST'],
+    allowedHeaders: ['Content-Type']
+  }));
+
+// app.use(cors({ options: "*" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
