@@ -10,7 +10,7 @@ function App() {
   
   async function handleSubmit(e) {
     e.preventDefault();
-    try{const response = await axios.post("https://wt-4-contact-form-nodemailer-backend.vercel.app/sendEmail", {
+    try{const response = await axios.post("http://localhost:6996/sendEmail", {
       name, 
       email, 
       message 
